@@ -1,0 +1,17 @@
+// Ogol on the original board — the language over the USB serial port.
+
+package {
+  name    = "ogol-pico"
+  version = "0.1.0"
+}
+
+dependencies {
+  pico { git = "github.com/sysl-lang/pico", version = "0.1.0" }
+  ogol { git = "github.com/sysl-lang/ogol", version = "0.2.0" }
+}
+
+// The heap is the language's, not this program's. An interpreter grows a token list, a tree and a
+// dictionary as the person at the keyboard decides how big they should be.
+requires {
+  alloc = true
+}
