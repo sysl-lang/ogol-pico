@@ -6,7 +6,7 @@ port — the same program as [the hosted console](https://github.com/sysl-lang/o
 and which chip it is built for.
 
 ```
-Ogol on a Raspberry Pi Pico W. Type a line, or 'bye' to leave.
+Ogol on a Raspberry Pi Pico W. Type a line.
 
 ogol> print 3 + 4
 7

@@ -7,6 +7,7 @@
 import sh.sysl.pico.*
 import sh.sysl.ogol.*
 import sysl.term.edit.editor
+import sysl.time.DurationUnits
 
 @export("main")
 boot() -> int =
@@ -18,7 +19,7 @@ boot() -> int =
     // no reader — so the banner is written after this and not before.
     wait_for_terminal()
 
-    print("Ogol on a Raspberry Pi Pico W. Type a line, or 'bye' to leave.")
+    print("Ogol on a Raspberry Pi Pico W. Type a line.")
     print("")
 
     var input = console_in()
@@ -28,5 +29,11 @@ boot() -> int =
 
     session(interp, &ed)
 
-    0
+    // `session` returns when `bye` is typed, and a board has nowhere to return *to*. A hosted console
+    // falls out of `main` and the process ends; here `crt0` would run off the end of the world, so the
+    // request is answered rather than obeyed.
+    print("nothing to leave to — reset the board")
+
+    loop
+        sleep(1.s)
 end boot
