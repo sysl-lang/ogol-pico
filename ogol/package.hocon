@@ -13,5 +13,5 @@ dependencies {
 // The heap is the language's, not this program's. An interpreter grows a token list, a tree and a
 // dictionary as the person at the keyboard decides how big they should be.
 requires {
-  alloc = true
+  heap = true
 }
