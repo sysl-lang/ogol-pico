@@ -74,6 +74,34 @@ carries the USB reset interface. A board that has never carried such firmware ne
 hold the button, plug in, release. **It mounts as `/Volumes/RPI-RP2`** — `RP2350` is the Pico 2's
 name, and looking for that here finds nothing.
 
+## What a refusal looks like, and what it costs
+
+**ogol v0.3.1 points at the mistake.** The language's reader sits on `sh.sysl.parsing`, so every token
+carries the span it was written at and the console draws the line with a caret under the word:
+
+```
+ogol> to twice :n
+.... output n * *
+error: '*' needs something in front of it
+ --> <console>:2:12
+  |
+2 | output n * *
+  |            ^
+```
+
+That is worth more here than at a desktop, because a held definition may be several lines long by the
+time something in it is refused and a serial console has nothing to scroll back to.
+
+**It costs 23,340 bytes of flash, measured rather than guessed at**: text went 183,860 → 207,200 on
+sysl 0.0.79, which is 12.7%. The caret is placed by *display width* rather than by byte count, so a
+line with a tab or a wide character in it still has the caret under the right thing — and that links
+Unicode's width tables, which is nearly all of the increase. On a 2 MB part it is not a question;
+it would be one on a chip with tens of kilobytes.
+
+**A fault from *running* has no caret and that is deliberate**, not a gap: `that divides by zero` is a
+complaint about what a value came to, and the tree it came from carries no positions. The reader knows
+where; the evaluator does not.
+
 ## Licence
 
 ISC.
