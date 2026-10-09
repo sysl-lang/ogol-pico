@@ -1,4 +1,3 @@
-github.com/sysl-lang/ogol v0.2.0 sha256:f0cb257539f6d9254e1392f9b7d23cfe801085107a4aeed34b1c6860f123ac71
-github.com/sysl-lang/ogol v0.3.1 sha256:5318586eb44bf346ac938fd1d016f2c672e8ee7c1d4cbec12c814dd745238c58
-github.com/sysl-lang/parsing v0.2.1 sha256:f2fcb1866eb2648ba11ae3d4b9db49fed6ad6152becfb056bf9c799d8917cf66
+github.com/sysl-lang/ogol v0.3.2 sha256:9a42e04dbed650bf39474d42941c38fb50c5c8f31a976d6562598df67f497425
+github.com/sysl-lang/parsing v0.13.0 sha256:d392b5d4449238ba518b59699b211298d7b33dc8f4abe78de8bfda57ac61e065
 github.com/sysl-lang/pico v0.1.0 sha256:1898d1af139cf766f82ae67f941037c7f5436926fa62d43bd3f4065047a9143e
