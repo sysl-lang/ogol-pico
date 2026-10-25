@@ -3,11 +3,14 @@
 package {
   name    = "ogol-pico"
   version = "0.1.0"
+
+  // The oldest compiler this builds with.
+  sysl = "0.6.0"
 }
 
 dependencies {
   pico { git = "github.com/sysl-lang/pico", version = "0.1.0" }
-  ogol { git = "github.com/sysl-lang/ogol", version = "0.3.2" }
+  ogol { git = "github.com/sysl-lang/ogol", version = "0.3.3" }
 }
 
 // The heap is the language's, not this program's. An interpreter grows a token list, a tree and a

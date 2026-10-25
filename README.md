@@ -56,7 +56,7 @@ float is not a convention chosen over hardware — it is the only thing there is
 
 ## Building
 
-Needs **sysl 0.0.40 or newer** — that is the release Armv6-M arrived in — the
+Needs **sysl 0.6.0 or newer**, the
 [pico-sdk](https://github.com/raspberrypi/pico-sdk), `picotool`, and Arm's toolchain from the
 **`gcc-arm-embedded` cask**; Homebrew's `arm-none-eabi-gcc` *formula* ships no newlib and cannot link
 the SDK's own boot stage.

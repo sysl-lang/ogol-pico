@@ -42,7 +42,7 @@ add_custom_command(
             "$<$<BOOL:${SYSL_C_DEFINES}>:-D;$<JOIN:${SYSL_C_DEFINES},;-D;>>"
             -o ${SYSL_ARCHIVE}
     DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/ogol/main.sysl
-            ${CMAKE_CURRENT_SOURCE_DIR}/ogol/package.hocon
+            ${CMAKE_CURRENT_SOURCE_DIR}/ogol/sysl.hocon
     COMMENT "Compiling Ogol and its console for Armv6-M"
     # Without `COMMAND_EXPAND_LISTS` the two generator expressions above are useless: a quoted
     # argument that expands to a `;`-separated list stays one argument.
