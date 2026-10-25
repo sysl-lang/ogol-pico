@@ -9,7 +9,7 @@ package {
 }
 
 dependencies {
-  pico { git = "github.com/sysl-lang/pico", version = "0.1.0" }
+  pico { git = "github.com/sysl-lang/pico", version = "0.1.1" }
   ogol { git = "github.com/sysl-lang/ogol", version = "0.3.3" }
 }
 
